@@ -16,5 +16,19 @@ namespace sharpList.Controllers
     {
       this.housesService = housesService;
     }
+
+    [HttpGet]
+    public ActionResult<List<House>> GetAllHouses()
+    {
+      try
+      {
+        List<House> houses = housesService.GetAllHouses();
+        return Ok(houses);
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      }
+    }
   }
 }

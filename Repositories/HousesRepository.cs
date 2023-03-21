@@ -13,5 +13,16 @@ namespace sharpList.Repositories
     {
       _db = db;
     }
+
+    internal List<House> GetAllHouses()
+    {
+      string sql = @"
+      SELECT
+      *
+      FROM houses;
+      ";
+      List<House> houses = _db.Query<House>(sql).ToList();
+      return houses;
+    }
   }
 }

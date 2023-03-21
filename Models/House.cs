@@ -15,5 +15,6 @@ namespace sharpList.Models
     public int Floors { get; set; }
     public int SqFt { get; set; }
     public string Description { get; set; }
+    public string ImgUrl { get; set; }
   }
 }

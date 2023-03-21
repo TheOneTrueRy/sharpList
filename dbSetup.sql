@@ -19,6 +19,18 @@ CREATE TABLE IF NOT EXISTS cars(
 )default charset utf8 COMMENT '';
 DROP table IF EXISTS cars;
 
+CREATE TABLE IF NOT EXISTS houses(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  address VARCHAR(100) NOT NULL,
+  bedrooms INT NOT NULL,
+  bathrooms INT NOT NULL,
+  year INT NOT NULL,
+  floors INT NOT NULL,
+  sqft INT NOT NULL,
+  description VARCHAR(5000),
+  imgUrl VARCHAR(600)
+)default charset utf8 COMMENT '';
+
 -- ALTER TABLE cars
 -- MODIFY COLUMN id
 
